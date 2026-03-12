@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Zakaria Hossam | Data Engineer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins', sans-serif;}
+
+body{
+background:#0f172a;
+color:#fff;
+line-height:1.6;
+scroll-behavior:smooth;
+}
+
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:-1;
+}
+
+#loader{
+position:fixed;
+width:100%;
+height:100%;
+background:#0f172a;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:9999;
+}
+
+.spinner{
+width:40px;
+height:40px;
+border:4px solid #1e293b;
+border-top:4px solid #38bdf8;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+0%{transform:rotate(0)}
+100%{transform:rotate(360deg)}
+}
+
+header{
+background:rgba(11,18,32,0.95);
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:1px solid #1e293b;
+}
+
+header a{color:#38bdf8;font-weight:bold;font-size:20px;}
+
+nav a{
+margin-left:25px;
+color:#fff;
+font-size:14px;
+transition:.3s;
+}
+
+nav a:hover{color:#38bdf8;}
+
+section{padding:120px 8%;}
+
+h2{
+color:#38bdf8;
+margin-bottom:40px;
+font-size:34px;
+text-align:center;
+}
+
+.card{
+background:rgba(30,41,59,.65);
+backdrop-filter:blur(10px);
+border-radius:20px;
+padding:35px;
+margin-bottom:35px;
+border:1px solid rgba(56,189,248,.2);
+}
+
+.home{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+min-height:100vh;
+}
+
+.home-text{max-width:600px;}
+
+.home-text h1{font-size:48px;}
+
+.home-text span{color:#38bdf8;}
+
+.home-text p{
+color:#94a3b8;
+margin-top:20px;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 35px;
+background:#38bdf8;
+color:#0b1120;
+border-radius:10px;
+font-weight:600;
+}
+
+.home img{
+width:300px;
+border-radius:20px;
+box-shadow:0 0 60px rgba(56,189,248,.25);
+}
+
+.section-flex{
+display:flex;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.section-flex img{
+width:260px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.section-content{
+flex:1;
+min-width:250px;
+}
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+}
+
+.skill-box{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+}
+
+.progress{
+width:100%;
+height:8px;
+background:#0f172a;
+border-radius:10px;
+margin-top:10px;
+}
+
+.progress-bar{
+height:100%;
+background:#38bdf8;
+border-radius:10px;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.project-card{
+border-radius:20px;
+overflow:hidden;
+background:#1e293b;
+}
+
+.project-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.project-content{padding:20px;}
+
+#topBtn{
+position:fixed;
+bottom:30px;
+right:30px;
+background:#38bdf8;
+color:#0f172a;
+border:none;
+padding:12px 16px;
+border-radius:10px;
+cursor:pointer;
+display:none;
+}
+
+footer{
+text-align:center;
+padding:35px;
+background:#0b1220;
+color:#94a3b8;
+border-top:1px solid #1e293b;
+}
+
+@media(max-width:768px){
+.section-flex{
+flex-direction:column;
+text-align:center;
+}
+.section-flex img{
+width:90%;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<div id="loader">
+<div class="spinner"></div>
+</div>
+
+<header>
+<a href="#">Zakaria Hossam</a>
+<nav>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#experience">Experience</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="home">
+
+<div class="home-text">
+<h1>Hi, I'm <span>Zakaria Hossam</span><br>Data Engineer</h1>
+
+<p>
+I specialize in transforming raw data into actionable insights,
+building scalable ETL pipelines and enterprise data systems.
+</p>
+
+<a href="#contact" class="btn">Contact Me</a>
+</div>
+
+<img src="Zakaria Hossam.jpeg">
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<div class="section-flex">
+
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Data Engineering">
+
+<div class="section-content">
+
+<div class="card about-card">
+
+<p>
+I am a passionate Data Engineering trainee with practical experience in SQL, Python, and cloud-based data workflows. I build reliable data pipelines, automate ETL processes, and design data models optimized for performance.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="education">
+
+<h2>Education</h2>
+
+<div class="section-flex">
+
+<img src="helwan.jpg">
+
+<div class="section-content">
+<div class="card">
+
+<h3>B.Sc. Intelligent Systems Engineering</h3>
+<p>Helwan National University — Expected 2027</p>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="experience">
+
+<h2>Experience</h2>
+
+<div class="section-flex">
+
+<img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df">
+
+<div class="section-content">
+<div class="card">
+
+<h3>Data Engineering Trainee</h3>
+<p>DEPI Microsoft Track — 2025 / 2026</p>
+
+<ul>
+<li>Built automated ETL pipelines using Python and SQL</li>
+<li>Designed relational data models</li>
+<li>Implemented Azure cloud data workflows</li>
+</ul>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<section>
+
+<h2>Professional Impact</h2>
+
+<div class="section-flex">
+
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
+
+<div class="section-content">
+
+<div class="skills-grid">
+
+<div class="skill-box">
+<h3>5+</h3>
+<p>Data Pipelines Built</p>
+</div>
+
+<div class="skill-box">
+<h3>1TB+</h3>
+<p>Data Processed</p>
+</div>
+
+<div class="skill-box">
+<h3>10+</h3>
+<p>ETL Workflows</p>
+</div>
+
+<div class="skill-box">
+<h3>99%</h3>
+<p>Pipeline Reliability</p>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div class="section-flex">
+
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+
+<div class="section-content">
+
+<div class="skills-grid">
+
+<div class="skill-box">
+<h3>Python</h3>
+<div class="progress">
+<div class="progress-bar" style="width:90%"></div>
+</div>
+</div>
+
+<div class="skill-box">
+<h3>SQL</h3>
+<div class="progress">
+<div class="progress-bar" style="width:85%"></div>
+</div>
+</div>
+
+<div class="skill-box">
+<h3>Azure</h3>
+<div class="progress">
+<div class="progress-bar" style="width:75%"></div>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+<div class="project-content">
+<h3>ETL Pipeline</h3>
+<p>End to end data pipeline for analytics systems.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd">
+<div class="project-content">
+<h3>Data Warehouse</h3>
+<p>Star schema warehouse for BI dashboards.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+<h2>Contact</h2>
+
+<div class="card contact-card">
+
+<p>
+<i class='bx bx-envelope'></i>
+<a href="mailto:zelh1402@gmail.com">zelh1402@gmail.com</a>
+</p>
+
+<p>
+<i class='bx bx-map'></i>
+Kom Hamada, El Beheira, Egypt
+</p>
+
+<div class="contact-links">
+
+<a href="https://www.linkedin.com/in/zakaria-hossam-el-hadad-bb4846314" target="_blank">
+<i class='bx bxl-linkedin-square'></i> LinkedIn
+</a>
+
+<a href="#" target="_blank">
+<i class='bx bxl-github'></i> GitHub
+</a>
+
+<a href="#" target="_blank">
+<i class='bx bx-download'></i> Download Resume
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Zakaria Hossam | Data Engineering Portfolio
+</footer>
+
+<button id="topBtn">↑</button>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<script>
+
+particlesJS("particles-js",{
+particles:{
+number:{value:70},
+color:{value:"#38bdf8"},
+shape:{type:"circle"},
+opacity:{value:0.4},
+size:{value:3},
+line_linked:{enable:true,distance:150,color:"#38bdf8",opacity:0.3},
+move:{enable:true,speed:2}
+}
+});
+
+window.addEventListener("load",()=>{
+document.getElementById("loader").style.display="none";
+});
+
+const topBtn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+if(document.documentElement.scrollTop>300){
+topBtn.style.display="block";
+}else{
+topBtn.style.display="none";
+}
+};
+
+topBtn.onclick=function(){
+window.scrollTo({top:0,behavior:'smooth'});
+};
+
+</script>
+
+</body>
+</html>
